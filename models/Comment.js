@@ -51,7 +51,6 @@ const CommentSchema = new Schema(
     id: false
   }
 );
-
 CommentSchema.virtual('replyCount').get(function() {
   return this.replies.length;
 });

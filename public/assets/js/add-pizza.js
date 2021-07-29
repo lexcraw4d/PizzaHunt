@@ -70,5 +70,10 @@ const handlePizzaSubmit = event => {
     });
 };
 
-$pizzaForm.addEventListener('submit', handlePizzaSubmit);
+$pizzaForm.addEventListener('submit', handlePizzaSubmit)
+.catch(err => {
+  console.log(err);
+  saveRecord(formData);
+});
+
 $addToppingBtn.addEventListener('click', handleAddTopping);
